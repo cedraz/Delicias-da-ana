@@ -1,0 +1,113 @@
+.footer-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: #252425;
+  color: aliceblue;
+}
+
+.column {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+}
+
+.column li{
+  list-style: none;
+}
+
+.column > p{
+  font-weight: 500;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.footer__link-wrapper {
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 5px;
+  width: 150px;
+  color: aliceblue;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s ease-in-out;
+}
+
+.footer__link-wrapper i {
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 550px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column {
+    padding: 10px;
+  }
+
+  .col__one {
+    margin-top: 20px;
+  }
+}
+
+/* .instagram {
+  background-image: linear-gradient(45deg, #fff, #fff, #dc4184, #ffac4d);
+  background-size: 300%;
+  background-position: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.7s;
+}
+
+.instagram:hover {
+  background-position: right;
+}
+
+.whatsapp {
+  background-image: linear-gradient(45deg, #fff, #fff, #7ad06d, #7ad06d);
+  background-size: 300%;
+  background-position: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.7s;
+}
+
+.whatsapp:hover {
+  background-position: right;
+}
+
+.email {
+  background-image: linear-gradient(45deg, #fff, #fff, #f14d59, #f14d59);
+  background-size: 300%;
+  background-position: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.7s;
+}
+
+.email:hover {
+  background-position: right;
+} */
+
+.instagram:hover {
+  color: #dc4184;
+}
+.whatsapp:hover {
+  color: #7ad06d;
+}
+.email:hover {
+  color: #f14d59;
+}

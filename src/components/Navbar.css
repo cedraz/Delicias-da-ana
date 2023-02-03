@@ -1,0 +1,135 @@
+:root {
+  --primary: aliceblue;
+  --secondary: #FF6584;
+  --background-navbar: #252425 ;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background-navbar);
+  padding: 20px 200px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active::after {
+  display: none;
+}
+
+.navbar li{
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+.navbar-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  color: var(--primary);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.navbar-logo h1{
+  font-weight: 500;
+}
+
+.navbar-logo i {
+  color: var(--secondary);
+  font-size: 2rem;
+  margin-right: 15px;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--primary);
+  transition: 0.2s ease-in-out;
+}
+
+.nav-item i {
+  width: 25px;
+  font-size: 1rem;
+  margin-right: 5px;
+}
+
+.nav-item:hover {
+  color: var(--secondary);
+}
+
+.nav-item:hover::after, .active::after{
+  content: "";
+  width: 60%;
+  height: 2px;
+  background-color: var(--secondary);
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+.mobile {
+  display: none;
+  color: var(--primary);
+}
+
+.mobile i{
+  align-items: center;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    background: var(--background-navbar);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 40px 10px 40px 10px;
+    transition: 0.7s ease-in-out;
+    top: 100px;
+    left: 100%;
+    height: 60%;
+    width: 50%;
+    border-radius: 30px;
+  }
+
+  .navbar .active::after {
+    display: none;
+  }
+
+  .nav-item i {
+    font-size: 1em;
+  }
+
+  .active {
+   
+    transform: translate(-50%);
+    left: 50%;
+  }
+
+  .navbar li{
+    margin-bottom: 25px;
+  }
+
+  .mobile {
+    display: block;
+  }
+  
+  .mobile i{
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+

@@ -1,0 +1,19 @@
+.btn-container {
+  height: 100%;
+  border: none;
+  background-color: #252425;
+  color: aliceblue;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-family: "Reem Kufi", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.btn-container:hover {
+  background-color: #FF6584;
+}
